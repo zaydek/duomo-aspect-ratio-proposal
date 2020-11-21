@@ -2,7 +2,7 @@
   "name": "duomo-aspect-ratio-proposal",
   "license": "MIT",
   "scripts": {
-    "watch-build": "yarn watch --interval 0.1 'yarn sass --no-charset --no-source-map src/consumer.scss public/out.css' src",
+		"watch": "sass --watch --no-charset --no-source-map src/consumer.scss public/out.css",
     "build": "sass --no-charset --no-source-map src/consumer.scss public/out.css"
   },
   "devDependencies": {
