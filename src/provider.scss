@@ -1,0 +1,112 @@
+@use "sass:list";
+
+@use "resolvers" as *;
+
+@function generate-range($lower, $upper, $step: 1) {
+	@if $upper <= $lower {
+		@error "generate-range: `$upper` must be greater than `$lower`";
+	} @else if $step < 0 {
+		@error "generate-range: `$step` must be greater than `0`";
+	}
+	$range: ();
+	@while $lower < $upper {
+		$range: list.append($range, $lower, comma);
+		$lower: $lower + $step;
+	}
+	@return $range;
+}
+
+@function generate-meta-range($descs...) {
+	$meta-range: ();
+	@each $desc in $descs {
+		@if type-of($desc) == "number" {
+			$meta-range: list.join($meta-range, $desc);
+		} @else if type-of($desc) == "list" {
+			$meta-range: list.join($meta-range, generate-range(list.nth($desc, 1), list.nth($desc, 2), list.nth($desc, 3)));
+		}
+	}
+	@return $meta-range;
+}
+
+// prettier-ignore
+$range: generate-meta-range(
+	(  0,   10,  1),
+	( 10,   20,  2),
+	( 20,   40,  4),
+	( 40,   80,  8),
+	( 80,  160, 16),
+	(160,  320, 32),
+	(320,  640, 64),
+	(640, 1280, 64),
+
+	1280,
+);
+
+// NOTE (1): Use `calc(100% / ...)` to reverse order.
+// NOTE (2): Use `(var(...))` can be `16 / 9` and `1.78` works.
+
+@mixin __aspect {
+	.aspect {
+		& {
+			position: relative;
+			padding-bottom: calc(100% / (var(--aspect-ratio, var(--duomo-width) / var(--duomo-height))));
+		}
+		& > * {
+			position: absolute;
+			@each $prop in (top, right, bottom, left) {
+				#{$prop}: 0;
+			}
+			@each $prop in (width, height) {
+				#{$prop}: 100%;
+			}
+		}
+	}
+
+	[style*="--aspect-ratio"] {
+		& {
+			position: relative;
+			padding-bottom: calc(100% / (var(--aspect-ratio)));
+		}
+		& > * {
+			position: absolute;
+			@each $prop in (top, right, bottom, left) {
+				#{$prop}: 0;
+			}
+			@each $prop in (width, height) {
+				#{$prop}: 100%;
+			}
+		}
+	}
+}
+
+@mixin __width {
+	@each $v in $range {
+		.w-#{$v}:not(.aspect) {
+			width: rem($v);
+			@at-root {
+				.aspect.w-#{$v} {
+					--duomo-width: #{$v};
+				}
+			}
+		}
+	}
+}
+
+@mixin __height {
+	@each $v in $range {
+		.h-#{$v}:not(.aspect) {
+			height: rem($v);
+			@at-root {
+				.aspect.h-#{$v} {
+					--duomo-height: #{$v};
+				}
+			}
+		}
+	}
+}
+
+@mixin proposal {
+	@include __aspect;
+	@include __width;
+	@include __height;
+}

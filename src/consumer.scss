@@ -1,0 +1,5 @@
+@use "provider";
+
+@at-root {
+	@include provider.proposal;
+}

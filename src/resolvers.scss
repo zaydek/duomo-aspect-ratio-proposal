@@ -1,0 +1,34 @@
+@use "sass:math";
+
+@function rem($v) {
+	@if type-of($v) != "number" {
+		@return $v;
+	}
+	$floored: math.floor($v);
+	@if $floored == 0 {
+		@return 0;
+	}
+	@return $floored / 16 + rem;
+}
+
+@function em($v) {
+	@if type-of($v) != "number" {
+		@return $v;
+	}
+	$floored: math.floor($v);
+	@if $floored == 0 {
+		@return 0;
+	}
+	@return $floored / 16 + em;
+}
+
+@function px($v) {
+	@if type-of($v) != "number" {
+		@return $v;
+	}
+	$floored: math.floor($v);
+	@if $floored == 0 {
+		@return 0;
+	}
+	@return $floored + px;
+}

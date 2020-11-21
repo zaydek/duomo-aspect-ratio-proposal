@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/@zaydek/duomo@0.6.x" /> -->
+		<link rel="stylesheet" href="./out.css" />
+		<style>
+			* {
+				margin: 0;
+			}
+
+			.red-500 {
+				background-color: red;
+			}
+			.blue-500 {
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="display: flex; justify-content: center; align-items: center; height: 100vh">
+			<div class="w-640">
+				<!-- Class-based implementation: -->
+				<div class="aspect w-16 h-9 blue-500">
+					<iframe
+						src="https://www.youtube-nocookie.com/embed/AY9MXUCD2-Y"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				<!-- Style-based implementation: -->
+				<div class="red-500" style="--aspect-ratio: 2.65">
+					<iframe
+						src="https://www.youtube-nocookie.com/embed/AY9MXUCD2-Y"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

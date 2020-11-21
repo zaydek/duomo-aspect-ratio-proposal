@@ -1,0 +1,741 @@
+.aspect {
+  position: relative;
+  padding-bottom: calc(100% / (var(--aspect-ratio, var(--duomo-width) / var(--duomo-height))));
+}
+.aspect > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+[style*="--aspect-ratio"] {
+  position: relative;
+  padding-bottom: calc(100% / (var(--aspect-ratio)));
+}
+[style*="--aspect-ratio"] > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.w-0:not(.aspect) {
+  width: 0;
+}
+.aspect.w-0 {
+  --duomo-width: 0;
+}
+
+.w-1:not(.aspect) {
+  width: 0.0625rem;
+}
+.aspect.w-1 {
+  --duomo-width: 1;
+}
+
+.w-2:not(.aspect) {
+  width: 0.125rem;
+}
+.aspect.w-2 {
+  --duomo-width: 2;
+}
+
+.w-3:not(.aspect) {
+  width: 0.1875rem;
+}
+.aspect.w-3 {
+  --duomo-width: 3;
+}
+
+.w-4:not(.aspect) {
+  width: 0.25rem;
+}
+.aspect.w-4 {
+  --duomo-width: 4;
+}
+
+.w-5:not(.aspect) {
+  width: 0.3125rem;
+}
+.aspect.w-5 {
+  --duomo-width: 5;
+}
+
+.w-6:not(.aspect) {
+  width: 0.375rem;
+}
+.aspect.w-6 {
+  --duomo-width: 6;
+}
+
+.w-7:not(.aspect) {
+  width: 0.4375rem;
+}
+.aspect.w-7 {
+  --duomo-width: 7;
+}
+
+.w-8:not(.aspect) {
+  width: 0.5rem;
+}
+.aspect.w-8 {
+  --duomo-width: 8;
+}
+
+.w-9:not(.aspect) {
+  width: 0.5625rem;
+}
+.aspect.w-9 {
+  --duomo-width: 9;
+}
+
+.w-10:not(.aspect) {
+  width: 0.625rem;
+}
+.aspect.w-10 {
+  --duomo-width: 10;
+}
+
+.w-12:not(.aspect) {
+  width: 0.75rem;
+}
+.aspect.w-12 {
+  --duomo-width: 12;
+}
+
+.w-14:not(.aspect) {
+  width: 0.875rem;
+}
+.aspect.w-14 {
+  --duomo-width: 14;
+}
+
+.w-16:not(.aspect) {
+  width: 1rem;
+}
+.aspect.w-16 {
+  --duomo-width: 16;
+}
+
+.w-18:not(.aspect) {
+  width: 1.125rem;
+}
+.aspect.w-18 {
+  --duomo-width: 18;
+}
+
+.w-20:not(.aspect) {
+  width: 1.25rem;
+}
+.aspect.w-20 {
+  --duomo-width: 20;
+}
+
+.w-24:not(.aspect) {
+  width: 1.5rem;
+}
+.aspect.w-24 {
+  --duomo-width: 24;
+}
+
+.w-28:not(.aspect) {
+  width: 1.75rem;
+}
+.aspect.w-28 {
+  --duomo-width: 28;
+}
+
+.w-32:not(.aspect) {
+  width: 2rem;
+}
+.aspect.w-32 {
+  --duomo-width: 32;
+}
+
+.w-36:not(.aspect) {
+  width: 2.25rem;
+}
+.aspect.w-36 {
+  --duomo-width: 36;
+}
+
+.w-40:not(.aspect) {
+  width: 2.5rem;
+}
+.aspect.w-40 {
+  --duomo-width: 40;
+}
+
+.w-48:not(.aspect) {
+  width: 3rem;
+}
+.aspect.w-48 {
+  --duomo-width: 48;
+}
+
+.w-56:not(.aspect) {
+  width: 3.5rem;
+}
+.aspect.w-56 {
+  --duomo-width: 56;
+}
+
+.w-64:not(.aspect) {
+  width: 4rem;
+}
+.aspect.w-64 {
+  --duomo-width: 64;
+}
+
+.w-72:not(.aspect) {
+  width: 4.5rem;
+}
+.aspect.w-72 {
+  --duomo-width: 72;
+}
+
+.w-80:not(.aspect) {
+  width: 5rem;
+}
+.aspect.w-80 {
+  --duomo-width: 80;
+}
+
+.w-96:not(.aspect) {
+  width: 6rem;
+}
+.aspect.w-96 {
+  --duomo-width: 96;
+}
+
+.w-112:not(.aspect) {
+  width: 7rem;
+}
+.aspect.w-112 {
+  --duomo-width: 112;
+}
+
+.w-128:not(.aspect) {
+  width: 8rem;
+}
+.aspect.w-128 {
+  --duomo-width: 128;
+}
+
+.w-144:not(.aspect) {
+  width: 9rem;
+}
+.aspect.w-144 {
+  --duomo-width: 144;
+}
+
+.w-160:not(.aspect) {
+  width: 10rem;
+}
+.aspect.w-160 {
+  --duomo-width: 160;
+}
+
+.w-192:not(.aspect) {
+  width: 12rem;
+}
+.aspect.w-192 {
+  --duomo-width: 192;
+}
+
+.w-224:not(.aspect) {
+  width: 14rem;
+}
+.aspect.w-224 {
+  --duomo-width: 224;
+}
+
+.w-256:not(.aspect) {
+  width: 16rem;
+}
+.aspect.w-256 {
+  --duomo-width: 256;
+}
+
+.w-288:not(.aspect) {
+  width: 18rem;
+}
+.aspect.w-288 {
+  --duomo-width: 288;
+}
+
+.w-320:not(.aspect) {
+  width: 20rem;
+}
+.aspect.w-320 {
+  --duomo-width: 320;
+}
+
+.w-384:not(.aspect) {
+  width: 24rem;
+}
+.aspect.w-384 {
+  --duomo-width: 384;
+}
+
+.w-448:not(.aspect) {
+  width: 28rem;
+}
+.aspect.w-448 {
+  --duomo-width: 448;
+}
+
+.w-512:not(.aspect) {
+  width: 32rem;
+}
+.aspect.w-512 {
+  --duomo-width: 512;
+}
+
+.w-576:not(.aspect) {
+  width: 36rem;
+}
+.aspect.w-576 {
+  --duomo-width: 576;
+}
+
+.w-640:not(.aspect) {
+  width: 40rem;
+}
+.aspect.w-640 {
+  --duomo-width: 640;
+}
+
+.w-704:not(.aspect) {
+  width: 44rem;
+}
+.aspect.w-704 {
+  --duomo-width: 704;
+}
+
+.w-768:not(.aspect) {
+  width: 48rem;
+}
+.aspect.w-768 {
+  --duomo-width: 768;
+}
+
+.w-832:not(.aspect) {
+  width: 52rem;
+}
+.aspect.w-832 {
+  --duomo-width: 832;
+}
+
+.w-896:not(.aspect) {
+  width: 56rem;
+}
+.aspect.w-896 {
+  --duomo-width: 896;
+}
+
+.w-960:not(.aspect) {
+  width: 60rem;
+}
+.aspect.w-960 {
+  --duomo-width: 960;
+}
+
+.w-1024:not(.aspect) {
+  width: 64rem;
+}
+.aspect.w-1024 {
+  --duomo-width: 1024;
+}
+
+.w-1088:not(.aspect) {
+  width: 68rem;
+}
+.aspect.w-1088 {
+  --duomo-width: 1088;
+}
+
+.w-1152:not(.aspect) {
+  width: 72rem;
+}
+.aspect.w-1152 {
+  --duomo-width: 1152;
+}
+
+.w-1216:not(.aspect) {
+  width: 76rem;
+}
+.aspect.w-1216 {
+  --duomo-width: 1216;
+}
+
+.w-1280:not(.aspect) {
+  width: 80rem;
+}
+.aspect.w-1280 {
+  --duomo-width: 1280;
+}
+
+.h-0:not(.aspect) {
+  height: 0;
+}
+.aspect.h-0 {
+  --duomo-height: 0;
+}
+
+.h-1:not(.aspect) {
+  height: 0.0625rem;
+}
+.aspect.h-1 {
+  --duomo-height: 1;
+}
+
+.h-2:not(.aspect) {
+  height: 0.125rem;
+}
+.aspect.h-2 {
+  --duomo-height: 2;
+}
+
+.h-3:not(.aspect) {
+  height: 0.1875rem;
+}
+.aspect.h-3 {
+  --duomo-height: 3;
+}
+
+.h-4:not(.aspect) {
+  height: 0.25rem;
+}
+.aspect.h-4 {
+  --duomo-height: 4;
+}
+
+.h-5:not(.aspect) {
+  height: 0.3125rem;
+}
+.aspect.h-5 {
+  --duomo-height: 5;
+}
+
+.h-6:not(.aspect) {
+  height: 0.375rem;
+}
+.aspect.h-6 {
+  --duomo-height: 6;
+}
+
+.h-7:not(.aspect) {
+  height: 0.4375rem;
+}
+.aspect.h-7 {
+  --duomo-height: 7;
+}
+
+.h-8:not(.aspect) {
+  height: 0.5rem;
+}
+.aspect.h-8 {
+  --duomo-height: 8;
+}
+
+.h-9:not(.aspect) {
+  height: 0.5625rem;
+}
+.aspect.h-9 {
+  --duomo-height: 9;
+}
+
+.h-10:not(.aspect) {
+  height: 0.625rem;
+}
+.aspect.h-10 {
+  --duomo-height: 10;
+}
+
+.h-12:not(.aspect) {
+  height: 0.75rem;
+}
+.aspect.h-12 {
+  --duomo-height: 12;
+}
+
+.h-14:not(.aspect) {
+  height: 0.875rem;
+}
+.aspect.h-14 {
+  --duomo-height: 14;
+}
+
+.h-16:not(.aspect) {
+  height: 1rem;
+}
+.aspect.h-16 {
+  --duomo-height: 16;
+}
+
+.h-18:not(.aspect) {
+  height: 1.125rem;
+}
+.aspect.h-18 {
+  --duomo-height: 18;
+}
+
+.h-20:not(.aspect) {
+  height: 1.25rem;
+}
+.aspect.h-20 {
+  --duomo-height: 20;
+}
+
+.h-24:not(.aspect) {
+  height: 1.5rem;
+}
+.aspect.h-24 {
+  --duomo-height: 24;
+}
+
+.h-28:not(.aspect) {
+  height: 1.75rem;
+}
+.aspect.h-28 {
+  --duomo-height: 28;
+}
+
+.h-32:not(.aspect) {
+  height: 2rem;
+}
+.aspect.h-32 {
+  --duomo-height: 32;
+}
+
+.h-36:not(.aspect) {
+  height: 2.25rem;
+}
+.aspect.h-36 {
+  --duomo-height: 36;
+}
+
+.h-40:not(.aspect) {
+  height: 2.5rem;
+}
+.aspect.h-40 {
+  --duomo-height: 40;
+}
+
+.h-48:not(.aspect) {
+  height: 3rem;
+}
+.aspect.h-48 {
+  --duomo-height: 48;
+}
+
+.h-56:not(.aspect) {
+  height: 3.5rem;
+}
+.aspect.h-56 {
+  --duomo-height: 56;
+}
+
+.h-64:not(.aspect) {
+  height: 4rem;
+}
+.aspect.h-64 {
+  --duomo-height: 64;
+}
+
+.h-72:not(.aspect) {
+  height: 4.5rem;
+}
+.aspect.h-72 {
+  --duomo-height: 72;
+}
+
+.h-80:not(.aspect) {
+  height: 5rem;
+}
+.aspect.h-80 {
+  --duomo-height: 80;
+}
+
+.h-96:not(.aspect) {
+  height: 6rem;
+}
+.aspect.h-96 {
+  --duomo-height: 96;
+}
+
+.h-112:not(.aspect) {
+  height: 7rem;
+}
+.aspect.h-112 {
+  --duomo-height: 112;
+}
+
+.h-128:not(.aspect) {
+  height: 8rem;
+}
+.aspect.h-128 {
+  --duomo-height: 128;
+}
+
+.h-144:not(.aspect) {
+  height: 9rem;
+}
+.aspect.h-144 {
+  --duomo-height: 144;
+}
+
+.h-160:not(.aspect) {
+  height: 10rem;
+}
+.aspect.h-160 {
+  --duomo-height: 160;
+}
+
+.h-192:not(.aspect) {
+  height: 12rem;
+}
+.aspect.h-192 {
+  --duomo-height: 192;
+}
+
+.h-224:not(.aspect) {
+  height: 14rem;
+}
+.aspect.h-224 {
+  --duomo-height: 224;
+}
+
+.h-256:not(.aspect) {
+  height: 16rem;
+}
+.aspect.h-256 {
+  --duomo-height: 256;
+}
+
+.h-288:not(.aspect) {
+  height: 18rem;
+}
+.aspect.h-288 {
+  --duomo-height: 288;
+}
+
+.h-320:not(.aspect) {
+  height: 20rem;
+}
+.aspect.h-320 {
+  --duomo-height: 320;
+}
+
+.h-384:not(.aspect) {
+  height: 24rem;
+}
+.aspect.h-384 {
+  --duomo-height: 384;
+}
+
+.h-448:not(.aspect) {
+  height: 28rem;
+}
+.aspect.h-448 {
+  --duomo-height: 448;
+}
+
+.h-512:not(.aspect) {
+  height: 32rem;
+}
+.aspect.h-512 {
+  --duomo-height: 512;
+}
+
+.h-576:not(.aspect) {
+  height: 36rem;
+}
+.aspect.h-576 {
+  --duomo-height: 576;
+}
+
+.h-640:not(.aspect) {
+  height: 40rem;
+}
+.aspect.h-640 {
+  --duomo-height: 640;
+}
+
+.h-704:not(.aspect) {
+  height: 44rem;
+}
+.aspect.h-704 {
+  --duomo-height: 704;
+}
+
+.h-768:not(.aspect) {
+  height: 48rem;
+}
+.aspect.h-768 {
+  --duomo-height: 768;
+}
+
+.h-832:not(.aspect) {
+  height: 52rem;
+}
+.aspect.h-832 {
+  --duomo-height: 832;
+}
+
+.h-896:not(.aspect) {
+  height: 56rem;
+}
+.aspect.h-896 {
+  --duomo-height: 896;
+}
+
+.h-960:not(.aspect) {
+  height: 60rem;
+}
+.aspect.h-960 {
+  --duomo-height: 960;
+}
+
+.h-1024:not(.aspect) {
+  height: 64rem;
+}
+.aspect.h-1024 {
+  --duomo-height: 1024;
+}
+
+.h-1088:not(.aspect) {
+  height: 68rem;
+}
+.aspect.h-1088 {
+  --duomo-height: 1088;
+}
+
+.h-1152:not(.aspect) {
+  height: 72rem;
+}
+.aspect.h-1152 {
+  --duomo-height: 1152;
+}
+
+.h-1216:not(.aspect) {
+  height: 76rem;
+}
+.aspect.h-1216 {
+  --duomo-height: 1216;
+}
+
+.h-1280:not(.aspect) {
+  height: 80rem;
+}
+.aspect.h-1280 {
+  --duomo-height: 1280;
+}
